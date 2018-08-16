@@ -1,0 +1,4 @@
+server:
+  port: 8110
+  servlet:
+    contextPath: /first
