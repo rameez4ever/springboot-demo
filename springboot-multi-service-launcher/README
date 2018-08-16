@@ -1,3 +1,5 @@
+Prerequisite: Java8, Maven3+
+
 This is demo project to illustrate how to run multiple microservices in single JVM
 Follow below steps to launch the microservices:
 1) cd springboot-multi-service-launcher
