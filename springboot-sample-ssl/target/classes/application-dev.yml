@@ -1,0 +1,12 @@
+server:
+  port: 8110
+  servlet:
+    contextPath: /first
+  ssl:
+    key-alias: sample_server
+    key-password: sample
+    key-store: classpath:sample-ssl-server.jks
+    key-store-type: JKS
+    key-store-provider: SUN
+    protocol: TLS
+    enabled: true
