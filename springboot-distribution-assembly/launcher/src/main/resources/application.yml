@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: Launcher
+    
+backend:
+  apps:
+    first:
+      contextPath: /first
+      port: 8110
+    second:
+      contextPath: /second
+      port: 8111

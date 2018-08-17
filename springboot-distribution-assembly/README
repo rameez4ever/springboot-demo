@@ -1,0 +1,29 @@
+Prerequisite: Java8, Maven3+
+
+This is demo project to illustrate how to create a distribution assembly which is ready to run at anywhere. Here we have used maven's
+assembly plugin to build distribution and spring boot thin layout plugin to make it ready to ship and ready to run.
+Follow below steps to launch the microservices:
+
+1) ~ cd springboot-distribution-assembly
+2) mvn clean install package (This may take time as it ll resolve all the dependencies.)
+3) This will build a distribution @ /springboot-distribution-assembly/distribution/target/distribution-0.0.1-SNAPSHOT
+   This distribution is not ready to run yet as it doesn't have any of your native or thirdparty dependencies.
+4) To do so run below commands
+   ~cd /springboot-distribution-assembly/distribution/target/distribution-0.0.1-SNAPSHOT
+   ~java -jar first-service-0.0.1-SNAPSHOT.jar --thin.dryrun --thin.root=.
+   ~java -jar second-service-0.0.1-SNAPSHOT.jar --thin.dryrun --thin.root=.
+   
+   * --thin.dryrun this will warm up maven repository local to your distribution. You can find all your dependencies 
+   		in distribution-0.0.1-SNAPSHOT/repository
+   * --thin.root=. Make sure to out . which will refer to current directory and create repository in distribution.
+   
+   * You can write shell script to warm up repository for all services at once. Refer /distribution-0.0.1-SNAPSHOT/dryRun.sh
+
+5) Now you can zip this distribution and ship it anywhere and start the services
+	
+	~java -jar first-service-0.0.1-SNAPSHOT.jar --thin.root=.
+    ~java -jar second-service-0.0.1-SNAPSHOT.jar --thin.root=.
+    
+6) 	This will launch both the microservice. You can use swagger doc for services:
+	http://localhost:8110/first/swagger-ui.html
+	http://localhost:8111/second/swagger-ui.html
