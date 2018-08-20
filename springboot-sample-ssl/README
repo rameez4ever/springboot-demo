@@ -7,8 +7,8 @@ by applying self signed certificates:
 2) mvn clean install
 3) mvn springboot:run
 4) This will launch both the microservice. You can use swagger doc for services:
-	https://localhost:8110/first/swagger-ui.html
-	https://localhost:8111/second/swagger-ui.html
+	https://localhost:8110/secured/swagger-ui.html
+	
 
 	
 Certificates information:

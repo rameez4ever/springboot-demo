@@ -1,7 +1,7 @@
 server:
   port: 8110
   servlet:
-    contextPath: /first
+    contextPath: /secured
   ssl:
     key-alias: sample_server
     key-password: sample
