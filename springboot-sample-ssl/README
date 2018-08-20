@@ -1,0 +1,26 @@
+Prerequisite: Java8, Maven3+
+
+This is demo project to illustrate how to make your http rest endpoints secured (https) 
+by applying self signed certificates:
+
+1) ~ cd springboot-sample-ssl
+2) mvn clean install
+3) mvn springboot:run
+4) This will launch both the microservice. You can use swagger doc for services:
+	https://localhost:8110/first/swagger-ui.html
+	https://localhost:8111/second/swagger-ui.html
+
+	
+Certificates information:
+--------------------------
+- You will find certificate details in application-dev.yml file.
+- To create your sample certificate using java genkey tool follow below commands.
+
+	1) keytool -genkey -alias sample_server -keyalg RSA -keysize 2048 -validity 700 -keypass sample -storepass sample -keystore sample-ssl-server.jks
+	   -- Answer further questions related to certificate owner.
+	   -- After answering all question your ceriticate is generated.
+	2) keytool -list -keystore sample-ssl-server.jks
+	   -- This is just to know whether cerificate is generated properly or not.
+	3) Copy generated certificate file to springboot-sample-ssl/src/main/resources
+	4) Enter details of the certificate in application-dev.yml
+	5) You are done. Your endpoints are secured now.
