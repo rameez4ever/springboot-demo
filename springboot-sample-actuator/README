@@ -43,3 +43,6 @@ management:
 ///////////////////////////////////
 
 You can use JConsole for graphical view of all the metrics by connecting to com.rmz.actuator this domain.      
+
+You can use third party micro meter registries as well instead on JMX for nice graphical views.
+https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-metrics.html#production-ready-metrics-export-influx
