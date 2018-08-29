@@ -1,0 +1,18 @@
+server:
+  port: 8110
+  servlet:
+    contextPath: /demo
+
+management.metrics.export.jmx:
+    domain: com.rmz.actuator
+    enabled: true
+    step: 1m
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    jmx:
+      exposure:
+        include: "*"
