@@ -1,0 +1,48 @@
+Prerequisite: Java8, Maven3+
+
+This is demo project to illustrate how to monitor health, memory usage and many other metrics for 
+Spring Boot Applications
+
+1) ~ cd springboot-sample-actuator
+2) mvn clean install
+3) mvn springboot:run
+4) This will launch both the microservice. You can use swagger doc for services:
+	http://localhost:8110/demo/swagger-ui.html
+
+Monitoring endpoints:
+----------------------
+Once started you will get number of endpoints available for you for monitoring purpose
+http://localhost:8110/demo/swagger-ui.html#/operation-handler
+
+
+Here are some of the useful endpoints:
+http://localhost:8110/demo/actuator/threaddump
+http://localhost:8110/demo/actuator/beans
+http://localhost:8110/demo/actuator/env
+http://localhost:8110/demo/actuator/httpstrace
+http://localhost:8110/demo/actuator/metrics/jvm.memory.max
+http://localhost:8110/demo/actuator/metrics/jvm.threads.live
+
+
+By default Spring Boot exports metrics to JMX domain. And you have explicitly enalble the endpoints:
+Please refer application-dev.yml:
+//////////////////////////////////
+management.metrics.export.jmx:
+    domain: com.rmz.actuator
+    enabled: true
+    step: 1m
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    jmx:
+      exposure:
+        include: "*"
+///////////////////////////////////
+
+You can use JConsole for graphical view of all the metrics by connecting to com.rmz.actuator this domain.      
+
+You can use third party micro meter registries as well instead on JMX for nice graphical views.
+https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-metrics.html#production-ready-metrics-export-influx

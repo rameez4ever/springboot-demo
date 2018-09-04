@@ -1,0 +1,6 @@
+# config context path to "/" by setting an empty string
+spring:
+  application:
+    name: EmployeeService
+  profiles:
+    active: dev
