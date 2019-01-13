@@ -4,8 +4,8 @@ This is demo project to illustrate CRUD operations on JSON file.
 
 Follow below steps to start the service
 
-1) $ git clone https://github.com/rameez4ever/cabaran-repo.git
-2) $ cd cabaran
+1) $ git clone https://github.com/rameez4ever/springboot-demo.git
+2) $ cd springboot-json-crud
 2) $ mvn clean install
 3) $ mvn spring-boot:run
 4) This will launch microservice. You can use swagger doc to find documentation for all rest APIs:
