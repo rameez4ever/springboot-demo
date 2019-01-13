@@ -1,0 +1,49 @@
+Prerequisite: Java8, Maven3+
+
+This is demo project to illustrate CRUD operations on JSON file.
+
+Follow below steps to start the service
+
+1) $ git clone https://github.com/rameez4ever/cabaran-repo.git
+2) $ cd cabaran
+2) $ mvn clean install
+3) $ mvn spring-boot:run
+4) This will launch microservice. You can use swagger doc to find documentation for all rest APIs:
+	http://localhost:8110/cabaran/swagger-ui.html
+	
+***Updating configuration***
+1) You can update server configuration and json file configuration @application-{profile}.yml file.
+2) By default dev profile is active.
+	
+***CRUD endpoints***
+----------------
+1) http://localhost:8110/cabaran/api/v1/employee/get     -- GET
+2) http://localhost:8110/cabaran/api/v1/employee/create  -- POST
+3) http://localhost:8110/cabaran/api/v1/employee/create  -- PATCH
+4) http://localhost:8110/cabaran/api/v1/employee/delete  -- DELETE 
+
+***Filtering endpoints example***
+--------------------
+1) http://localhost:8110/cabaran/api/v1/employee/filterByAge?operator=lt&value=20			   -- GET
+2) http://localhost:8110/cabaran/api/v1/employee/get?key=salary&operator=lte&value=20&sort=asc -- GET
+
+Please visit swagger documentation for API signatures.
+
+***Refresh cache***
+---------------
+1) We are caching the employee data on application start up. So if any updates to json then that should be done from application only.
+2) If json file is updated manually then please refresh the cache by hitting below endpoint.
+	
+	http://localhost:8110/cabaran/api/v1/employee/refresh
+
+***Monitoring endpoints***
+----------------------
+Once started you will get number of endpoints available for you for monitoring purpose
+http://localhost:8110/cabaran/swagger-ui.html#/operation-handler
+
+***Internationalization***
+To change the locale to Malaysia just add 'lang' parameter to any request.
+e.g http://localhost:8110/cabaran/api/v1/employee/create?lang=my
+
+***Future Scope***
+1) Spring Security + OAuth 2.0 for securing endpoints.

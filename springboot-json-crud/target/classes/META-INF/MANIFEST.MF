@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: springboot-cabaran-test
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Rameez.shikalgar
+Implementation-Vendor-Id: com.raydar
+Build-Jdk: 1.8.0_131
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/cabaran
+Created-By: Maven Integration for Eclipse
+
