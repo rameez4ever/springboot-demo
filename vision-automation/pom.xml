@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.emaratech.automation</groupId>
+	<artifactId>vision-automation</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>vision-automation</name>
+	<description>Demo project for launching multiple microservices with one jvm</description>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.4.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.9.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.hp.lft</groupId>
+			<artifactId>sdk</artifactId>
+			<version>14.51.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.hp.lft</groupId>
+			<artifactId>sdk</artifactId>
+			<version>14.51.0</version>
+			<classifier>javadoc</classifier>
+		</dependency>
+
+		<dependency>
+			<groupId>com.hp.lft</groupId>
+			<artifactId>report</artifactId>
+			<version>14.51.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.hp.lft</groupId>
+			<artifactId>unittesting</artifactId>
+			<version>14.51.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.hp.lft</groupId>
+			<artifactId>verifications</artifactId>
+			<version>14.51.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.hp.lft</groupId>
+			<artifactId>reportbuilder</artifactId>
+			<version>14.51.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.hp.lft</groupId>
+			<artifactId>common</artifactId>
+			<version>14.51.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.11</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+
+	<modules>
+		<module>automation-util</module>
+		<module>application-model</module>
+		<module>fis-tests</module>
+		<!-- <module>vision-tests</module>
+		<module>establishment-tests</module> -->
+	</modules>
+</project>

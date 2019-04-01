@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="8140" started-at="2019-04-01T06:51:27Z" finished-at="2019-04-01T06:51:35Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="8140" started-at="2019-04-01T06:51:27Z" finished-at="2019-04-01T06:51:35Z">
+      <class name="com.emaratech.automation.fis.VisionLoginTest">
+        <test-method status="PASS" signature="Start_Engine()[pri:0, instance:com.emaratech.automation.fis.VisionLoginTest@3108bc]" name="Start_Engine" is-config="true" duration-ms="902" started-at="2019-04-01T10:51:26Z" finished-at="2019-04-01T10:51:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Start_Engine -->
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.emaratech.automation.fis.VisionLoginTest@3108bc]" name="launchBrowser" is-config="true" duration-ms="2978" started-at="2019-04-01T10:51:27Z" finished-at="2019-04-01T10:51:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="loginSuccussFlow()[pri:0, instance:com.emaratech.automation.fis.VisionLoginTest@3108bc]" name="loginSuccussFlow" duration-ms="5146" started-at="2019-04-01T10:51:30Z" finished-at="2019-04-01T10:51:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginSuccussFlow -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.emaratech.automation.fis.VisionLoginTest@3108bc]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-04-01T10:51:35Z" finished-at="2019-04-01T10:51:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.emaratech.automation.fis.VisionLoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

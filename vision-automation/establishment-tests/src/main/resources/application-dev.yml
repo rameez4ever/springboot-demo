@@ -1,0 +1,4 @@
+server:
+  port: 8111
+  servlet:
+    contextPath: /second
