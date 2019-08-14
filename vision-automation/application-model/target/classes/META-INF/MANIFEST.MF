@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: application-model
-Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: Rameez.Shikalgar
-Implementation-Vendor-Id: com.emaratech.automation
-Build-Jdk: 1.8.0_191
-Implementation-URL: http://maven.apache.org
-Created-By: Maven Integration for Eclipse
-
